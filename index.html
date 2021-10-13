@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <title>Article Page</title>
+</head>
+<body>
+    <nav class="main">
+        <button class="nav-btn" onclick="showNav()">
+            <img src="./img/main-hamburger.png" alt="hamburger" width="100%">
+        </button>
+        <div class="nav-container" id="navbarNav">
+               <a class="nav-parent" href="#">
+                   <div class="nav-item">
+                       <img src="./img/calender.png" alt="calender" class="nav-icon">
+                       <span class="item">Appoinments</span>
+                   </div>
+               </a>
+               <a class="nav-parent" href="#">
+                   <div class="nav-item">
+                       <img src="./img/calender plus.png" alt="calender" class="nav-icon">
+                       <span class="item">POS</span>
+                   </div>
+               </a>
+               <a class="nav-parent" href="#">
+                   <div class="nav-item">
+                       <img src="./img/hamburger.png" alt="hamburger" class="nav-icon">
+                       <span class="item">Services</span>
+                   </div>
+               </a>
+               <a class="nav-parent" href="#">
+                   <div class="nav-item">
+                       <img src="./img/puzzles.png" alt="puzzle" class="nav-icon">
+                       <span class="item">Articles</span>
+                   </div>
+               </a>
+               <a class="nav-parent" href="#">
+                   <div class="nav-item">
+                       <img src="./img/clock.png" alt="clock" class="nav-icon">
+                       <span class="item">Schedule</span>
+                   </div>
+               </a>
+               <a class="nav-parent" href="#">
+                   <div class="nav-item">
+                       <img src="./img/user.png" alt="user" class="nav-icon">
+                       <span class="item">Staff</span>
+                   </div>
+               </a>
+               <a class="nav-parent" href="#">
+                   <div class="nav-item">
+                       <img src="./img/users.png" alt="users" class="nav-icon">
+                       <span class="item">CRM</span>
+                   </div>
+               </a>
+               <a class="nav-parent" href="#">
+                   <div class="nav-item">
+                       <img src="./img/cash.png" alt="cash" class="nav-icon">
+                       <span class="item">Payments</span>
+                   </div>
+               </a>
+               <a class="nav-parent" href="#">
+                   <div class="nav-item">
+                       <img src="./img/settings.png" alt="settings" class="nav-icon">
+                       <span class="item">Settings</span>
+                   </div>
+               </a>
+               <a class="nav-parent" href="#">
+                   <div class="nav-item">
+                       <img src="./img/export.png" alt="calender" class="nav-icon">
+                       <span class="item">Export</span>
+                   </div>
+               </a>
+               <a class="nav-parent" href="#">
+                   <div class="nav-item">
+                       <img src="./img/circluar-rectangle.png" alt="rectangle" class="nav-icon">
+                       <span class="item">Embed Code</span>
+                   </div>
+               </a>
+               <a class="nav-parent" href="#">
+                   <div class="nav-item">
+                       <img src="./img/eraser.png" alt="eraser" class="nav-icon">
+                       <span class="item">Remove Sample Data</span>
+                   </div>
+               </a>
+             </div>
+        </div>
+    </nav> 
+    
+    <!-- contant -->
+    <div class="main-container">
+        <div class="category-container">
+            <div class="category-item" onclick="showItem('washing')" id="wash">Washing</div>
+            <div class="category-item" onclick="showItem('iorning')"id="iorn">Iorning</div>
+            <div class="category-item" onclick="showItem('washIorn')" id="wash_iorn">Wash&Iorn</div>
+            <div class="category-item" onclick="showItem('dryClean')" id="dry_clean">Dry Cleaning</div>
+        </div>
+        
+        <!-- article 1 -->
+        <div class="article" id="washing">
+            <div class="service">
+                <div class="service-child">
+                    <div class="service-head">
+                        <div class="service-icon">&#9783</div>
+                        <div class="heading">Shirt</div>
+                    </div>
+                    <div class="service-details">
+                        <div class="enable-service">
+                            <div>
+                                <input type="checkbox" class="toggle-check">
+                                <span class="check-label check-enable">Enable</span>
+                                <span class="check-btn"></span>
+                                <span class="check-btn"></span>
+                                <span class="check-label check-disable">Disable</span>
+                            </div>
+                        </div>
+                        <div class="options">
+                        <button class="dlt-btn" onclick="deleteService()">
+                            <img src="https://icon-library.com/images/red-recycle-bin-icon/red-recycle-bin-icon-18.jpg" alt="recycle bin" width="60%" height="60%">
+                        </button>
+                        <button class="expansion-btn">
+                            <img src="https://cdn-icons-png.flaticon.com/512/892/892498.png" alt="down-arrow" width="60%" height="60%">
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                    <div class="expansion" id="expand_washing">
+                            <div class="article-child">
+                                <span class="article-head">Article Name</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Article Image</span>
+                                <div class="img-container">
+                                    <div class="product-img">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="camera" width="60%" height="60%">
+                                    </div>
+                                    <select name="dress" id="product" class="product">
+                                        <option value="shirt">Shirt</option>
+                                        <option value="pant">Pant</option>
+                                        <option value="t-shirt">T shirt</option>
+                                        <option value="jeans">Jeans</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Base Price</span>
+                                <div class="base-price">
+                                    <span class="dolor">$</span>
+                                    <input type="text" class="price-input">
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Min Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Max Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <button class="update">Update</button>
+                            
+                    </div>
+            </div>
+    
+            <div class="service">
+                <div class="service-child">
+                    <div class="service-head">
+                        <div class="service-icon">&#9783</div>
+                        <div class="heading">Jean</div>
+                    </div>
+                    <div class="service-details">
+                        <div class="enable-service">
+                            <div>
+                                <input type="checkbox" class="toggle-check">
+                                <span class="check-label check-enable">Enable</span>
+                                <span class="check-btn"></span>
+                                <span class="check-btn"></span>
+                                <span class="check-label check-disable">Disable</span>
+                            </div>
+                        </div>
+                        <div class="options">
+                        <button class="dlt-btn" onclick="deleteService()">
+                            <img src="https://icon-library.com/images/red-recycle-bin-icon/red-recycle-bin-icon-18.jpg" alt="recycle bin" width="60%" height="60%">
+                        </button>
+                        <button class="expansion-btn">
+                            <img src="https://cdn-icons-png.flaticon.com/512/892/892498.png" alt="down-arrow" width="60%" height="60%">
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                    <div class="expansion" id="expand_washing">
+                            <div class="article-child">
+                                <span class="article-head">Article Name</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Article Image</span>
+                                <div class="img-container">
+                                    <div class="product-img">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="camera" width="60%" height="60%">
+                                    </div>
+                                    <select name="dress" id="product" class="product">
+                                        <option value="shirt">Shirt</option>
+                                        <option value="pant">Pant</option>
+                                        <option value="t-shirt">T shirt</option>
+                                        <option value="jeans">Jeans</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Base Price</span>
+                                <div class="base-price">
+                                    <span class="dolor">$</span>
+                                    <input type="text" class="price-input">
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Min Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Max Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <button class="update">Update</button>
+                            
+                    </div>
+            </div>
+    
+        </div>
+
+        <!-- next article -->
+
+        <div class="article" id="iorning">
+            <div class="service">
+                <div class="service-child">
+                    <div class="service-head">
+                        <div class="service-icon">&#9783</div>
+                        <div class="heading">Shirt</div>
+                    </div>
+                    <div class="service-details">
+                        <div class="enable-service">
+                            <div>
+                                <input type="checkbox" class="toggle-check">
+                                <span class="check-label check-enable">Enable</span>
+                                <span class="check-btn"></span>
+                                <span class="check-btn"></span>
+                                <span class="check-label check-disable">Disable</span>
+                            </div>
+                        </div>
+                        <div class="options">
+                        <button class="dlt-btn" onclick="deleteService()">
+                            <img src="https://icon-library.com/images/red-recycle-bin-icon/red-recycle-bin-icon-18.jpg" alt="recycle bin" width="60%" height="60%">
+                        </button>
+                        <button class="expansion-btn">
+                            <img src="https://cdn-icons-png.flaticon.com/512/892/892498.png" alt="down-arrow" width="60%" height="60%">
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                    <div class="expansion" id="expand_washing">
+                            <div class="article-child">
+                                <span class="article-head">Article Name</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Article Image</span>
+                                <div class="img-container">
+                                    <div class="product-img">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="camera" width="60%" height="60%">
+                                    </div>
+                                    <select name="dress" id="product" class="product">
+                                        <option value="shirt">Shirt</option>
+                                        <option value="pant">Pant</option>
+                                        <option value="t-shirt">T shirt</option>
+                                        <option value="jeans">Jeans</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Base Price</span>
+                                <div class="base-price">
+                                    <span class="dolor">$</span>
+                                    <input type="text" class="price-input">
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Min Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Max Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <button class="update">Update</button>
+                            
+                    </div>
+            </div>
+    
+            <div class="service">
+                <div class="service-child">
+                    <div class="service-head">
+                        <div class="service-icon">&#9783</div>
+                        <div class="heading">T-Shirt</div>
+                    </div>
+                    <div class="service-details">
+                        <div class="enable-service">
+                            <div>
+                                <input type="checkbox" class="toggle-check">
+                                <span class="check-label check-enable">Enable</span>
+                                <span class="check-btn"></span>
+                                <span class="check-btn"></span>
+                                <span class="check-label check-disable">Disable</span>
+                            </div>
+                        </div>
+                        <div class="options">
+                        <button class="dlt-btn" onclick="deleteService()">
+                            <img src="https://icon-library.com/images/red-recycle-bin-icon/red-recycle-bin-icon-18.jpg" alt="recycle bin" width="60%" height="60%">
+                        </button>
+                        <button class="expansion-btn">
+                            <img src="https://cdn-icons-png.flaticon.com/512/892/892498.png" alt="down-arrow" width="60%" height="60%">
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                    <div class="expansion" id="expand_washing">
+                            <div class="article-child">
+                                <span class="article-head">Article Name</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Article Image</span>
+                                <div class="img-container">
+                                    <div class="product-img">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="camera" width="60%" height="60%">
+                                    </div>
+                                    <select name="dress" id="product" class="product">
+                                        <option value="shirt">Shirt</option>
+                                        <option value="pant">Pant</option>
+                                        <option value="t-shirt">T shirt</option>
+                                        <option value="jeans">Jeans</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Base Price</span>
+                                <div class="base-price">
+                                    <span class="dolor">$</span>
+                                    <input type="text" class="price-input">
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Min Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Max Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <button class="update">Update</button>
+                            
+                    </div>
+            </div>
+    
+        </div>
+
+        <!-- 3rd article -->
+
+        <div class="article" id="washIorn">
+            <div class="service">
+                <div class="service-child">
+                    <div class="service-head">
+                        <div class="service-icon">&#9783</div>
+                        <div class="heading">Skirt</div>
+                    </div>
+                    <div class="service-details">
+                        <div class="enable-service">
+                            <div>
+                                <input type="checkbox" class="toggle-check">
+                                <span class="check-label check-enable">Enable</span>
+                                <span class="check-btn"></span>
+                                <span class="check-btn"></span>
+                                <span class="check-label check-disable">Disable</span>
+                            </div>
+                        </div>
+                        <div class="options">
+                        <button class="dlt-btn" onclick="deleteService()">
+                            <img src="https://icon-library.com/images/red-recycle-bin-icon/red-recycle-bin-icon-18.jpg" alt="recycle bin" width="60%" height="60%">
+                        </button>
+                        <button class="expansion-btn">
+                            <img src="https://cdn-icons-png.flaticon.com/512/892/892498.png" alt="down-arrow" width="60%" height="60%">
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                    <div class="expansion" id="expand_washing">
+                            <div class="article-child">
+                                <span class="article-head">Article Name</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Article Image</span>
+                                <div class="img-container">
+                                    <div class="product-img">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="camera" width="60%" height="60%">
+                                    </div>
+                                    <select name="dress" id="product" class="product">
+                                        <option value="shirt">Shirt</option>
+                                        <option value="pant">Pant</option>
+                                        <option value="t-shirt">T shirt</option>
+                                        <option value="jeans">Jeans</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Base Price</span>
+                                <div class="base-price">
+                                    <span class="dolor">$</span>
+                                    <input type="text" class="price-input">
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Min Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Max Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <button class="update">Update</button>
+                            
+                    </div>
+            </div>
+    
+            <div class="service">
+                <div class="service-child">
+                    <div class="service-head">
+                        <div class="service-icon">&#9783</div>
+                        <div class="heading">T-Shirt</div>
+                    </div>
+                    <div class="service-details">
+                        <div class="enable-service">
+                            <div>
+                                <input type="checkbox" class="toggle-check">
+                                <span class="check-label check-enable">Enable</span>
+                                <span class="check-btn"></span>
+                                <span class="check-btn"></span>
+                                <span class="check-label check-disable">Disable</span>
+                            </div>
+                        </div>
+                        <div class="options">
+                        <button class="dlt-btn" onclick="deleteService()">
+                            <img src="https://icon-library.com/images/red-recycle-bin-icon/red-recycle-bin-icon-18.jpg" alt="recycle bin" width="60%" height="60%">
+                        </button>
+                        <button class="expansion-btn">
+                            <img src="https://cdn-icons-png.flaticon.com/512/892/892498.png" alt="down-arrow" width="60%" height="60%">
+                        </button>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="expansion" id="expand_washing">
+                            <div class="article-child">
+                                <span class="article-head">Article Name</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Article Image</span>
+                                <div class="img-container">
+                                    <div class="product-img">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="camera" width="60%" height="60%">
+                                    </div>
+                                    <select name="dress" id="product" class="product">
+                                        <option value="shirt">Shirt</option>
+                                        <option value="pant">Pant</option>
+                                        <option value="t-shirt">T shirt</option>
+                                        <option value="jeans">Jeans</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Base Price</span>
+                                <div class="base-price">
+                                    <span class="dolor">$</span>
+                                    <input type="text" class="price-input">
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Min Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Max Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <button class="update">Update</button>
+                            
+                    </div>
+            </div>
+    
+        </div>
+
+        <!-- 4th article -->
+
+        <div class="article" id="dryClean">
+            <div class="service">
+                <div class="service-child">
+                    <div class="service-head">
+                        <div class="service-icon">&#9783</div>
+                        <div class="heading">Pant</div>
+                    </div>
+                    <div class="service-details">
+                        <div class="enable-service">
+                            <div>
+                                <input type="checkbox" class="toggle-check">
+                                <span class="check-label check-enable">Enable</span>
+                                <span class="check-btn"></span>
+                                <span class="check-btn"></span>
+                                <span class="check-label check-disable">Disable</span>
+                            </div>
+                        </div>
+                        <div class="options">
+                        <button class="dlt-btn" onclick="deleteService()">
+                            <img src="https://icon-library.com/images/red-recycle-bin-icon/red-recycle-bin-icon-18.jpg" alt="recycle bin" width="60%" height="60%">
+                        </button>
+                        <button class="expansion-btn">
+                            <img src="https://cdn-icons-png.flaticon.com/512/892/892498.png" alt="down-arrow" width="60%" height="60%">
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                    <div class="expansion" id="expand_washing">
+                            <div class="article-child">
+                                <span class="article-head">Article Name</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Article Image</span>
+                                <div class="img-container">
+                                    <div class="product-img">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="camera" width="60%" height="60%">
+                                    </div>
+                                    <select name="dress" id="product" class="product">
+                                        <option value="shirt">Shirt</option>
+                                        <option value="pant">Pant</option>
+                                        <option value="t-shirt">T shirt</option>
+                                        <option value="jeans">Jeans</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Base Price</span>
+                                <div class="base-price">
+                                    <span class="dolor">$</span>
+                                    <input type="text" class="price-input">
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Min Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Max Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <button class="update">Update</button>
+                            
+                    </div>
+            </div>
+    
+            <div class="service">
+                <div class="service-child">
+                    <div class="service-head">
+                        <div class="service-icon">&#9783</div>
+                        <div class="heading">Gown</div>
+                    </div>
+                    <div class="service-details">
+                        <div class="enable-service">
+                            <div>
+                                <input type="checkbox" class="toggle-check">
+                                <span class="check-label check-enable">Enable</span>
+                                <span class="check-btn"></span>
+                                <span class="check-btn"></span>
+                                <span class="check-label check-disable">Disable</span>
+                            </div>
+                        </div>
+                        <div class="options">
+                        <button class="dlt-btn" onclick="deleteService()">
+                            <img src="https://icon-library.com/images/red-recycle-bin-icon/red-recycle-bin-icon-18.jpg" alt="recycle bin" width="60%" height="60%">
+                        </button>
+                        <button class="expansion-btn">
+                            <img src="https://cdn-icons-png.flaticon.com/512/892/892498.png" alt="down-arrow" width="60%" height="60%">
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                    <div class="expansion" id="expand_washing">
+                            <div class="article-child">
+                                <span class="article-head">Article Name</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Article Image</span>
+                                <div class="img-container">
+                                    <div class="product-img">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="camera" width="60%" height="60%">
+                                    </div>
+                                    <select name="dress" id="product" class="product">
+                                        <option value="shirt">Shirt</option>
+                                        <option value="pant">Pant</option>
+                                        <option value="t-shirt">T shirt</option>
+                                        <option value="jeans">Jeans</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Base Price</span>
+                                <div class="base-price">
+                                    <span class="dolor">$</span>
+                                    <input type="text" class="price-input">
+                                </div>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Min Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <div class="article-child">
+                                <span class="article-head">Max Limit</span>
+                                <textarea name="" id="" class="article-input"></textarea>
+                            </div>
+                            <button class="update">Update</button>
+                            
+                    </div>
+            </div>
+    
+        </div>
+
+    </div>
+
+</body>
+</html>
